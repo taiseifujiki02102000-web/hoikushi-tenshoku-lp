@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レバウェル保育士 — 現場スタッフのアンケートで、入職前に現場の実態を確認できる転職支援</title>
+  <meta property="og:title" content="レバウェル保育士 — 現場スタッフのアンケートで、入職前に現場の実態を確認できる転職支援">
+  <meta property="og:description" content="年4,000回・17,000件のアンケートには、改善してほしい点も含まれています。良いことだけを伝えるサービスとは、構造が違います。">
+  <meta property="og:image" content="images/og_image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===========================
+       リセット・ベース
+    =========================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+      color: #2D2D2D;
+      background-color: #FFFFFF;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===========================
+       レイアウト共通
+    =========================== */
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 40px 0;
+    }
+
+    .section--offwhite {
+      background-color: #F7F6F4;
+    }
+
+    .section--dark {
+      background-color: #2C3E35;
+    }
+
+    /* ===========================
+       タイポグラフィ
+    =========================== */
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.55;
+      letter-spacing: 0.04em;
+      color: #1A1A1A;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.6;
+      letter-spacing: 0.04em;
+      color: #1A1A1A;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+    }
+
+    .section-headline {
+      margin-bottom: 24px;
+    }
+
+    .text-sub {
+      font-size: 12px;
+      color: #6B6B6B;
+      line-height: 1.5;
+    }
+
+    .text-note {
+      font-size: 11px;
+      color: #6B6B6B;
+      line-height: 1.5;
+    }
+
+    /* ===========================
+       S0：ナビバー
+    =========================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      height: 56px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar__ad-label {
+      font-size: 11px;
+      color: #6B6B6B;
+      letter-spacing: 0.05em;
+      border: 1px solid #6B6B6B;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .navbar__logo {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2C6B5A;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===========================
+       S1：ファーストビュー
+    =========================== */
+    .fv {
+      background-color: #FFFFFF;
+      padding: 28px 0 40px;
+    }
+
+    .fv__inner {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      background: #E8F4F8;
+      border: 1px solid #4A90A4;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #1A4A5A;
+      letter-spacing: 0.05em;
+    }
+
+    .badge--check {
+      gap: 4px;
+    }
+
+    .fv-headline {
+      margin-top: 16px;
+    }
+
+    .fv__sub {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #3D5A4C;
+      line-height: 1.75;
+    }
+
+    .fv__cta {
+      margin-top: 20px;
+    }
+
+    .fv__badge-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .fv__hero {
+      margin-top: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #EAF4F0;
+    }
+
+    .fv__hero-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #EAF4F0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 8px;
+    }
+
+    .fv__hero-placeholder-icon {
+      font-size: 40px;
+      opacity: 0.4;
+    }
+
+    .fv__hero-placeholder-text {
+      font-size: 12px;
+      color: #6B6B6B;
+      text-align: center;
+    }
+
+    /* ===========================
+       CTAボタン共通
+    =========================== */
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background-color: #2C6B5A;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-align: center;
+      padding: 18px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(44, 107, 90, 0.3);
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .cta-btn:hover {
+      background-color: #1E4E40;
+      box-shadow: 0 4px 12px rgba(44, 107, 90, 0.4);
+    }
+
+    .cta-btn:active {
+      background-color: #1E4E40;
+      transform: translateY(1px);
+    }
+
+    /* ===========================
+       S2：共感・問題提起
+    =========================== */
+    .quote-block {
+      background-color: #FFFFFF;
+      border-left: 4px solid #2C6B5A;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 16px 16px 20px;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    .quote-block__mark {
+      font-size: 20px;
+      color: #2C6B5A;
+      opacity: 0.4;
+      line-height: 1;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .quote-block__text {
+      font-size: 14px;
+      color: #3D5A4C;
+      line-height: 1.75;
+    }
+
+    .quote-block__source {
+      font-size: 11px;
+      color: #6B6B6B;
+      margin-top: 8px;
+    }
+
+    .prose {
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+    }
+
+    .prose + .prose {
+      margin-top: 12px;
+    }
+
+    .info-flow-box {
+      background-color: #FFFFFF;
+      border: 1px solid #E5E2DD;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #2D2D2D;
+      line-height: 1.8;
+    }
+
+    .info-flow-box__title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #6B6B6B;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    .divider-text {
+      border-bottom: 1px solid #E5E2DD;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .bridge-text {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+    }
+
+    /* ===========================
+       S3：不信先回り解消
+    =========================== */
+    .compare-wrap {
+      margin-top: 20px;
+    }
+
+    .compare-block {
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .compare-block--traditional {
+      background-color: #F7F6F4;
+    }
+
+    .compare-block--lebawell {
+      background-color: #EAF4F0;
+      border: 1.5px solid #2C6B5A;
+      margin-top: 12px;
+    }
+
+    .compare-block__label {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .compare-block__label--traditional {
+      color: #6B6B6B;
+    }
+
+    .compare-block__label--lebawell {
+      color: #2C6B5A;
+    }
+
+    .compare-block__list {
+      list-style: none;
+      font-size: 14px;
+      color: #2D2D2D;
+      line-height: 1.75;
+    }
+
+    .compare-block__list li {
+      padding-left: 1em;
+      text-indent: -1em;
+      margin-bottom: 6px;
+    }
+
+    .compare-block__list li::before {
+      content: "・";
+      color: inherit;
+    }
+
+    .vs-divider {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: #6B6B6B;
+      margin: 12px 0;
+    }
+
+    /* 数字強調ブロック */
+    .stats-block {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stats-item {
+      flex: 1;
+      background: #F8F0E8;
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .stats-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: #B07D4F;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .stats-unit {
+      font-size: 18px;
+      font-weight: 700;
+      color: #B07D4F;
+    }
+
+    .stats-label {
+      font-size: 12px;
+      color: #6B6B6B;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .stats-note {
+      font-size: 11px;
+      color: #6B6B6B;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .highlight-box {
+      background-color: #EAF4F0;
+      border-left: 3px solid #2C6B5A;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+    }
+
+    /* ===========================
+       S4：Promise
+    =========================== */
+    .promise-list {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .promise-item {
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 12px;
+    }
+
+    .promise-item__title {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #2C6B5A;
+      line-height: 1.5;
+    }
+
+    .promise-item__check {
+      flex-shrink: 0;
+      font-size: 17px;
+      color: #2C6B5A;
+      font-weight: 700;
+    }
+
+    .promise-item__body {
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+      margin-top: 8px;
+    }
+
+    .promise-cta {
+      margin-top: 24px;
+    }
+
+    /* ===========================
+       S5：証拠・信頼性
+    =========================== */
+    .testimonial-card {
+      background: #EAF4F0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .testimonial-card__label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #2C6B5A;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .testimonial-card__text {
+      font-size: 14px;
+      color: #3D5A4C;
+      line-height: 1.75;
+    }
+
+    .testimonial-card__text::before {
+      content: '\201C';
+      font-size: 28px;
+      color: #2C6B5A;
+      opacity: 0.3;
+      line-height: 0;
+      vertical-align: -8px;
+      margin-right: 4px;
+    }
+
+    .testimonial-card__source {
+      font-size: 11px;
+      color: #6B6B6B;
+      text-align: right;
+      margin-top: 12px;
+    }
+
+    .transparency-box {
+      background-color: #F7F6F4;
+      border-left: 3px solid #B07D4F;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+    }
+
+    /* ===========================
+       S6：Picture
+    =========================== */
+    .picture-prose {
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+    }
+
+    .picture-prose + .picture-prose {
+      margin-top: 20px;
+    }
+
+    .quote-block--picture {
+      background-color: #FFFFFF;
+    }
+
+    /* ===========================
+       S7：登録フロー
+    =========================== */
+    .step-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .step-item {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .step-item + .step-item {
+      margin-top: 8px;
+    }
+
+    .step-arrow {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .step-item__label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #A8C9B8;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .step-item__title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .step-item__desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.75;
+      margin-top: 8px;
+    }
+
+    .low-risk-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .low-risk-list li {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.75;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .low-risk-list li + li {
+      margin-top: 8px;
+    }
+
+    .low-risk-list__check {
+      color: #A8C9B8;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .s7-headline {
+      color: #FFFFFF;
+    }
+
+    .s7-cta {
+      margin-top: 24px;
+    }
+
+    /* ===========================
+       S8：FAQ
+    =========================== */
+    .faq-list {
+      margin-top: 8px;
+    }
+
+    .faq-item {
+      border-top: 1px solid #E5E2DD;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 1px solid #E5E2DD;
+    }
+
+    details.faq-details {
+      /* open状態のアニメーション対応 */
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 0;
+      cursor: pointer;
+      list-style: none;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1.6;
+      user-select: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-question::marker {
+      display: none;
+    }
+
+    .faq-icon {
+      font-size: 14px;
+      color: #6B6B6B;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 16px 0;
+      border-top: 1px dashed #E5E2DD;
+      padding-top: 12px;
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+      overflow: hidden;
+    }
+
+    .faq-answer p + p {
+      margin-top: 12px;
+    }
+
+    /* ===========================
+       S9：最終CTA
+    =========================== */
+    .final-cta-prose {
+      font-size: 15px;
+      color: #2D2D2D;
+      line-height: 1.85;
+    }
+
+    .final-cta-prose + .final-cta-prose {
+      margin-top: 16px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    .check-list li {
+      font-size: 14px;
+      color: #2C6B5A;
+      line-height: 1.75;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .check-list li + li {
+      margin-top: 8px;
+    }
+
+    .check-list__mark {
+      font-weight: 700;
+      color: #2C6B5A;
+      flex-shrink: 0;
+    }
+
+    .cta-sub-text {
+      font-size: 12px;
+      color: #6B6B6B;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .area-block {
+      margin-top: 24px;
+    }
+
+    .area-block__label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2D2D2D;
+      margin-bottom: 6px;
+    }
+
+    .area-block__list {
+      font-size: 12px;
+      color: #6B6B6B;
+      line-height: 1.7;
+    }
+
+    /* ===========================
+       フッター
+    =========================== */
+    .footer {
+      background-color: #2C3E35;
+      padding: 32px 20px;
+    }
+
+    .footer__inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer__text {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+    }
+
+    .footer__text + .footer__text {
+      margin-top: 8px;
+    }
+
+    .footer__link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: underline;
+    }
+
+    .footer__link:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* ===========================
+       PC対応（768px以上）
+    =========================== */
+    @media (min-width: 768px) {
+      .container {
+        max-width: 780px;
+        padding: 0 40px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .fv {
+        padding: 40px 0 64px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .stats-number {
+        font-size: 64px;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .fv__inner {
+        max-width: 780px;
+        padding: 0 40px;
+      }
+
+      .navbar__inner {
+        max-width: 780px;
+        padding: 0 40px;
+      }
+
+      /* PC：比較ブロック横並び */
+      .compare-wrap--grid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 0;
+      }
+
+      .compare-wrap--grid .compare-block--traditional {
+        margin-top: 0;
+      }
+
+      .compare-wrap--grid .compare-block--lebawell {
+        margin-top: 0;
+      }
+
+      .compare-wrap--grid .vs-divider {
+        padding: 0 12px;
+        margin: 0;
+      }
+
+      .footer__inner {
+        max-width: 780px;
+      }
+    }
+
+    /* FVインフォグラフィック */
+    .fv__infographic {
+      margin-top: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .fv__infographic img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* FVメインビジュアル（既存.fv__heroのimg対応） */
+    .fv__hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* S4 Promise ビジュアル */
+    .s4-visual {
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .s4-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* S6 転職後ビジュアル */
+    .s6-visual {
+      margin-bottom: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .s6-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       S0：ナビバー
+  =========================== -->
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <span class="navbar__ad-label">広告</span>
+      <span class="navbar__logo">レバウェル保育士</span>
+    </div>
+  </header>
+
+  <!-- ===========================
+       S1：ファーストビュー（FV）
+  =========================== -->
+  <section class="fv" aria-label="ファーストビュー">
+    <div class="fv__inner">
+
+      <!-- エリアバッジ -->
+      <span class="badge">東京・神奈川・大阪ほか15都道府県対応</span>
+
+      <!-- FVヘッドライン -->
+      <h1 class="fv-headline">採用担当者でなく現場スタッフの本音。<br>「話と違う」が起きない転職情報。</h1>
+
+      <!-- FVサブコピー（確定版） -->
+      <p class="fv__sub">年4,000回・17,000件のアンケートには、改善してほしい点・不満点も含まれています——良いことだけを伝えるサービスとは、構造が違います。</p>
+
+      <!-- CTAボタン（第1） -->
+      <div class="fv__cta">
+        <a href="https://hoikushi-oshigoto.jp/lp/1/" class="cta-btn" target="_blank" rel="noopener noreferrer">まず現場スタッフの情報を確認してみる</a>
+      </div>
+
+      <!-- 急かしませんバッジ -->
+      <div class="fv__badge-wrap">
+        <span class="badge badge--check"><span aria-hidden="true">✓</span> 急かしません</span>
+      </div>
+
+      <!-- FVインフォグラフィック -->
+      <div class="fv__infographic">
+        <img src="images/fv_infographic.png"
+             alt="採用担当者経由とレバウェル保育士の情報フロー比較図"
+             loading="eager"
+             width="600" height="337">
+      </div>
+
+      <!-- FVメインビジュアル -->
+      <div class="fv__hero">
+        <img src="images/fv_hero.png"
+             alt="保育士と子どもの自然な場面"
+             loading="eager"
+             width="600" height="337">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S2：共感・問題提起
+  =========================== -->
+  <section class="section section--offwhite" aria-label="共感・問題提起">
+    <div class="container">
+
+      <h2 class="section-headline">転職エージェントに「急かされて決めた」と、あとから気づいた。</h2>
+
+      <!-- 体験談引用1 -->
+      <div class="quote-block">
+        <span class="quote-block__mark" aria-hidden="true">"</span>
+        <p class="quote-block__text">焦って転職先を決めたことを後悔しています。あんなに辞めたかった前の職場に戻りたいとも思うくらいです。</p>
+        <p class="quote-block__source">出典：co-medical.com / 保育士の転職体験談</p>
+      </div>
+
+      <!-- 体験談引用2 -->
+      <div class="quote-block">
+        <span class="quote-block__mark" aria-hidden="true">"</span>
+        <p class="quote-block__text">園見学ではみんな笑顔で雰囲気が良さそうだったのに、入ってみたらベテランの先生のグループが強くて、新しい意見は一切通らなかったんです…。誰も助けてくれず、1年で辞めることになりました。</p>
+        <p class="quote-block__source">出典：hoikucollection.jp / 保育士の転職体験談</p>
+      </div>
+
+      <!-- 体験談引用3 -->
+      <div class="quote-block">
+        <span class="quote-block__mark" aria-hidden="true">"</span>
+        <p class="quote-block__text">持ち帰りは常にあり帰りも遅い。家では持ち帰りのせいで睡眠時間が2時間しかない日もあった。</p>
+        <p class="quote-block__source">出典：hoipura.jp / 保育士の職場口コミ</p>
+      </div>
+
+      <!-- 感覚描写テキスト -->
+      <div class="divider-text" style="margin-top: 24px;">
+        <p class="prose">入職してから気づいた。残業時間は、聞いていた話より多かった。</p>
+        <p class="prose">前任者がなぜ辞めたのか、面接では誰も教えてくれなかった。</p>
+        <p class="prose">採用担当者が嘘をついていたとは思わない。ただ、担当者の仕事は「あなたに入ってもらうこと」だった。あなたが「入ってよかった」と思うかどうかは、評価対象ではなかった。</p>
+        <p class="prose">あの失敗はなぜ起きたのか。その答えが、次の転職の出発点になります。</p>
+      </div>
+
+      <!-- 採用担当者フィルター構造説明 -->
+      <p class="prose" style="margin-top: 0;">採用担当者は採用のために動いています。それは嘘ではなく、仕組みの問題です。採用という目的があれば、伝える情報は自然と「応募したくなる内容」に寄る。「騙された」のではなく、「そうなる構造の中にいた」という話です。</p>
+
+      <!-- 情報フロー図 -->
+      <div class="info-flow-box">
+        <p class="info-flow-box__title">採用担当者の情報フロー</p>
+        <p>採用担当者　→　「採用したい」という動機</p>
+        <p>　　　↓</p>
+        <p>良い情報だけが求職者に届く</p>
+      </div>
+
+      <!-- 橋渡しフレーズ -->
+      <p class="bridge-text">採用担当者ではなく、実際に働く現場スタッフから情報を取れていたら、結果は変わっていたかもしれません。この問いへの答えを、次のセクションで説明します。</p>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S3：不信先回り解消
+  =========================== -->
+  <section class="section" aria-label="不信先回り解消">
+    <div class="container">
+
+      <h2 class="section-headline">「どうせここも、良いことしか言わないんでしょ」——その疑念に、先に答えます。</h2>
+
+      <!-- 情報フロー対比 -->
+      <div class="compare-wrap compare-wrap--grid">
+        <!-- 採用担当者ブロック -->
+        <div class="compare-block compare-block--traditional">
+          <p class="compare-block__label compare-block__label--traditional">従来の転職エージェント</p>
+          <ul class="compare-block__list">
+            <li>採用担当者は、園から採用コストを受け取る立場にあります</li>
+            <li>良い候補者を入職させることがゴールであるため、伝える情報は「応募したくなる内容」に偏りが生まれます</li>
+            <li>結果として「残業の実態」「前任者が辞めた理由」「人間関係の問題」は、届きにくくなります</li>
+          </ul>
+        </div>
+
+        <!-- vs区切り -->
+        <p class="vs-divider">vs</p>
+
+        <!-- レバウェル保育士ブロック -->
+        <div class="compare-block compare-block--lebawell">
+          <p class="compare-block__label compare-block__label--lebawell">レバウェル保育士</p>
+          <ul class="compare-block__list">
+            <li>採用担当者ではなく、現場で働くスタッフに直接ヒアリングします</li>
+            <li>担当者は「採用したい」という動機を持たないため、残業の実態・前任者の退職理由・改善してほしい点を含めた情報を収集します</li>
+            <li>その情報を、そのまま求職者に伝えます</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 数字強調ブロック -->
+      <div class="stats-block" aria-label="アンケート規模の実績">
+        <div class="stats-item">
+          <p class="stats-number">4,000<span class="stats-unit">回</span><span style="font-size: 14px; color: #B07D4F;">※</span></p>
+          <p class="stats-label">年間の現場訪問数</p>
+        </div>
+        <div class="stats-item">
+          <p class="stats-number">17,000<span class="stats-unit">件</span><span style="font-size: 14px; color: #B07D4F;">※</span></p>
+          <p class="stats-label">アンケート実施件数</p>
+        </div>
+      </div>
+      <p class="stats-note">※数字はレバウェル保育士公式情報に基づく。最終更新日は公式ページをご確認ください。</p>
+
+      <!-- ネガティブ情報開示テキスト -->
+      <div class="highlight-box">
+        アンケートには「改善してほしい点」「不満に感じていること」も含まれています。担当者は、その内容もあなたに共有します。「良いことだけを伝えるサービス」とは、情報を集める相手が違います。
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S4：Promise
+  =========================== -->
+  <section class="section section--offwhite" aria-label="できること（Promise）">
+    <div class="container">
+
+      <h2 class="section-headline">すべての問題を解決できるとは言いません。ただ、この3点は確認できます。</h2>
+
+      <!-- S4 Promise ビジュアル -->
+      <div class="s4-visual">
+        <img src="images/s4_promise_visual.png"
+             alt="穏やかに仕事をしている保育士"
+             loading="lazy"
+             width="600" height="337">
+      </div>
+
+      <ul class="promise-list">
+
+        <li class="promise-item">
+          <p class="promise-item__title">
+            <span class="promise-item__check" aria-hidden="true">✓</span>
+            採用担当者には聞けなかった情報を、入職前に確認できます
+          </p>
+          <p class="promise-item__body">現場スタッフへのアンケートをもとに、残業の実態・前任者の退職理由・職場の人間関係について、担当者が詳しくご説明します。求人票に書かれていない情報を、入職前に知ることができます。「聞いていた話と違った」という経験が過去にあるなら、その違いがなぜ起きたのかを、構造として理解した上で次の一歩を踏み出せます。</p>
+        </li>
+
+        <li class="promise-item">
+          <p class="promise-item__title">
+            <span class="promise-item__check" aria-hidden="true">✓</span>
+            転職するかどうかも含めて、あなたのペースで相談できます
+          </p>
+          <p class="promise-item__body">「迷っている段階」での相談を歓迎しています。転職時期の決定はあなた次第です。「いつまでに決めてください」とお伝えすることはありません。情報を確認しながら、自分で判断する——そのプロセスを支える相談相手として使っていただけます。</p>
+        </li>
+
+        <li class="promise-item">
+          <p class="promise-item__title">
+            <span class="promise-item__check" aria-hidden="true">✓</span>
+            急かしません。いつでも退会できます
+          </p>
+          <p class="promise-item__body">担当者から連絡が来ても、断っていただいてかまいません。登録後に「やっぱり今は動けない」と感じたら、いつでも退会できます。内定を辞退しても、怒ることもありません。</p>
+        </li>
+
+      </ul>
+
+      <!-- CTAボタン（S4末尾） -->
+      <div class="promise-cta">
+        <a href="https://hoikushi-oshigoto.jp/lp/1/" class="cta-btn" target="_blank" rel="noopener noreferrer">まず現場スタッフの情報を確認してみる</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S5：証拠・信頼性
+  =========================== -->
+  <section class="section" aria-label="証拠・信頼性">
+    <div class="container">
+
+      <h2 class="section-headline">「言葉より、数字と事実で見せる」という方針です。</h2>
+
+      <!-- 数字ブロック（S3と同じコンポーネント） -->
+      <div class="stats-block" aria-label="アンケート規模の実績">
+        <div class="stats-item">
+          <p class="stats-number">4,000<span class="stats-unit">回</span><span style="font-size: 14px; color: #B07D4F;">※</span></p>
+          <p class="stats-label">年間の現場訪問数</p>
+        </div>
+        <div class="stats-item">
+          <p class="stats-number">17,000<span class="stats-unit">件</span><span style="font-size: 14px; color: #B07D4F;">※</span></p>
+          <p class="stats-label">アンケート実施件数</p>
+        </div>
+      </div>
+      <p class="stats-note">※上記数字はレバウェル保育士の公式情報に基づきます。</p>
+
+      <!-- 体験談カードA -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__label">急かされなかった・自分のペースで進められた</p>
+        <p class="testimonial-card__text">焦らせるようなことも一切なく、こちらのペースに合わせて丁寧にサポートしてくれました。転職するか迷っている段階で相談しましたが、無理に応募を勧められませんでした。</p>
+        <p class="testimonial-card__source">出典：simples.co.jp / レバウェル保育士 利用者レビュー</p>
+      </div>
+
+      <!-- 体験談カードB -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__label">入職後のギャップがなかった・現場情報を事前確認できた</p>
+        <p class="testimonial-card__text">求人票だけでは分からない園の雰囲気を詳しく教えてもらえました。残業や人間関係についても事前に確認できたので、安心して応募できました。</p>
+        <p class="testimonial-card__source">出典：simples.co.jp / レバウェル保育士 利用者レビュー</p>
+      </div>
+
+      <!-- 体験談カードC -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__label">担当者に情報をしっかり伝えてもらえた</p>
+        <p class="testimonial-card__text">私の希望をしっかりとヒアリングしてくれ、それに合った求人だけを紹介してくれました。良い面だけでなく、注意すべき点も正直に話してくれたので、入職後のギャップがなく安心できました。</p>
+        <p class="testimonial-card__source">出典：simples.co.jp / レバウェル保育士 利用者レビュー</p>
+      </div>
+
+      <!-- 透明性テキスト -->
+      <div class="transparency-box">
+        「良いことだけを集めたアンケートです」とは言えません。改善してほしい点・不満に感じていることも、担当者が確認次第お伝えします。完璧な職場は存在しないと考えているので、ネガティブな情報を隠す理由がありません。
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S6：Picture（転職後の理想像）
+  =========================== -->
+  <section class="section section--offwhite" aria-label="転職後の理想像">
+    <div class="container">
+
+      <h2 class="section-headline">入職から3ヶ月後。担当者に言われていたことと、現場の現実が、一致していた。</h2>
+
+      <!-- S6 転職後ビジュアル -->
+      <div class="s6-visual">
+        <img src="images/s6_visual.png"
+             alt="保育士が穏やかに子どもと向き合っている場面"
+             loading="lazy"
+             width="600" height="450">
+      </div>
+
+      <!-- 日常描写テキスト -->
+      <p class="picture-prose">入職してから3ヶ月が経った。残業時間については、聞いていた通りだった。前任者が辞めた理由も、事前に教えてもらっていたことと変わらなかった。「また騙されるかもしれない」という緊張感を持ちながら過ごした最初の数週間が、少しずつほどけていくのがわかった。担当者に言われていたことと、目の前の現実が、ずれていない。子どもたちの前で、はじめて素直に笑えた気がした。それだけで、ずいぶん違う毎日になった。</p>
+
+      <p class="picture-prose">緊張が消えた分、目の前の子どもたちをちゃんと見られるようになった。前の職場では、保育のことよりも「また何かトラブルにならないか」「あの先生の顔色はどうか」ということに、気力を使っていた。職場の空気を読むことで精一杯で、子どもが何を感じているか、ゆっくり考える余裕がなかった。今は、保育のことだけを考えて出勤できる。「転職してよかった」と心から思えたのは、そのときだった。</p>
+
+      <!-- 一次データ引用1 -->
+      <div class="quote-block quote-block--picture" style="margin-top: 24px;">
+        <span class="quote-block__mark" aria-hidden="true">"</span>
+        <p class="quote-block__text">大成功でした。収入面や年間休日、通勤時間などほぼほぼ希望通りで、働き始めてからも偽りはありません。</p>
+        <p class="quote-block__source">出典：hoiku-labo.com / 保育士転職体験談</p>
+      </div>
+
+      <!-- 一次データ引用2 -->
+      <div class="quote-block quote-block--picture">
+        <span class="quote-block__mark" aria-hidden="true">"</span>
+        <p class="quote-block__text">おかげで、今はストレスなく、笑顔で保育に集中できています。</p>
+        <p class="quote-block__source">出典：simples.co.jp / 保育士転職体験談</p>
+      </div>
+
+      <!-- 一次データ引用3 -->
+      <div class="quote-block quote-block--picture">
+        <span class="quote-block__mark" aria-hidden="true">"</span>
+        <p class="quote-block__text">辞めてよかった、って心から思う。</p>
+        <p class="quote-block__source">出典：hoiku-pocket.jp / 保育士転職体験談</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S7：登録フロー説明
+  =========================== -->
+  <section class="section section--dark" aria-label="登録フロー説明">
+    <div class="container">
+
+      <h2 class="section-headline s7-headline">登録は「転職の決意」ではなく、「情報を確認する第一歩」です。</h2>
+
+      <!-- 3STEPフロー -->
+      <ul class="step-list" aria-label="登録の流れ">
+        <li class="step-item">
+          <span class="step-item__label">STEP 1</span>
+          <p class="step-item__title">フォームで無料登録（約30秒）</p>
+          <p class="step-item__desc">名前・お住まいのエリア・希望の勤務条件を入力するだけです。資格証のコピーや職歴書の準備は、この段階では必要ありません。</p>
+        </li>
+        <li class="step-arrow" aria-hidden="true">↓</li>
+        <li class="step-item">
+          <span class="step-item__label">STEP 2</span>
+          <p class="step-item__title">担当者よりご連絡いたします</p>
+          <p class="step-item__desc">登録後、担当者よりご連絡いたします。連絡の方法・タイミングについては、フォーム内でご希望をお伝えいただけます。</p>
+        </li>
+        <li class="step-arrow" aria-hidden="true">↓</li>
+        <li class="step-item">
+          <span class="step-item__label">STEP 3</span>
+          <p class="step-item__title">現場の情報を確認しながら、転職するかどうかも含めて相談</p>
+          <p class="step-item__desc">「この園の残業の実態を知りたい」「前任者が辞めた理由を確認したい」という具体的な質問から始めていただいて構いません。転職するかどうかの判断は、情報を確認してからで十分です。</p>
+        </li>
+      </ul>
+
+      <!-- 低リスクフレーム3点 -->
+      <ul class="low-risk-list" aria-label="登録のリスクについて">
+        <li><span class="low-risk-list__check" aria-hidden="true">✓</span><span>急かしません</span></li>
+        <li><span class="low-risk-list__check" aria-hidden="true">✓</span><span>いつでも退会できます</span></li>
+        <li><span class="low-risk-list__check" aria-hidden="true">✓</span><span>転職するかどうかから相談できます</span></li>
+      </ul>
+
+      <!-- CTAボタン（S7末尾） -->
+      <div class="s7-cta">
+        <a href="https://hoikushi-oshigoto.jp/lp/1/" class="cta-btn" target="_blank" rel="noopener noreferrer">まず現場スタッフの情報を確認してみる</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S8：FAQ
+  =========================== -->
+  <section class="section" aria-label="よくあるご質問">
+    <div class="container">
+
+      <h2 class="section-headline">登録前に気になること</h2>
+
+      <div class="faq-list">
+
+        <!-- Q1：デフォルト開く -->
+        <div class="faq-item">
+          <details class="faq-details" open>
+            <summary class="faq-question">
+              <span>Q：断ったら怒りますか？何度も連絡が来ますか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>断っても怒りません。しつこく連絡することもありません。「今は動けない」「この求人は合わない」とお伝えいただければ、それ以上お勧めすることはありません。</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Q2：デフォルト開く -->
+        <div class="faq-item">
+          <details class="faq-details" open>
+            <summary class="faq-question">
+              <span>Q：転職しない・迷っている状態でも相談できますか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>転職するかどうかも含めて相談できます。「情報だけ先に確認したい」「いつ動けるか決まっていない」という段階でのご登録を歓迎しています。転職時期の決定はあなた次第です。</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Q3：デフォルト閉じ -->
+        <div class="faq-item">
+          <details class="faq-details">
+            <summary class="faq-question">
+              <span>Q：個人情報は漏れませんか？今の職場に連絡が行くことはありますか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>求職者の同意なく、現在の職場への連絡は行いません。現職の方の転職活動を会社に知られたくないというご希望を理解した上で運営しています。</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Q4：デフォルト閉じ -->
+        <div class="faq-item">
+          <details class="faq-details">
+            <summary class="faq-question">
+              <span>Q：急かされますか？自分のペースで進められますか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>転職時期の決定はあなた次第です。「早く決めないと埋まりますよ」という案内はしません。情報を確認しながら、納得できるペースで進んでください。</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Q5：デフォルト閉じ -->
+        <div class="faq-item">
+          <details class="faq-details">
+            <summary class="faq-question">
+              <span>Q：なぜ無料なのですか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>採用が決まった場合に、採用先の園から手数料を受け取るビジネスモデルです。そのため、求職者の方への費用請求は一切ありません。登録から転職活動のサポートまで、無料でご利用いただけます。「無料で本当に大丈夫なのか」「あとから費用を請求されないか」というご不安をお持ちの方もいます。求職者の方への追加費用は発生しません。</p>
+              <p>「園から手数料をもらうなら、採用担当者と同じ立場ではないか」というご指摘はもっともです。違いは情報の取り方にあります。採用担当者は採用のために良い情報を選んで提供する立場です。私たちは採用担当者ではなく、現場で実際に働くスタッフに直接ヒアリングします。お金の仕組みが同じでも、情報を集める相手が違うため、あなたに届く情報が変わります。</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Q6：デフォルト閉じ -->
+        <div class="faq-item">
+          <details class="faq-details">
+            <summary class="faq-question">
+              <span>Q：登録したら転職が確定しますか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>登録は情報確認の第一歩です。転職を決定したことにはなりません。現場の情報を確認してから、転職するかどうかをご自身で判断していただけます。</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Q7：デフォルト閉じ -->
+        <div class="faq-item">
+          <details class="faq-details">
+            <summary class="faq-question">
+              <span>Q：対応エリアはどこですか？</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>現在、以下の15都道府県に対応しています。</p>
+              <p style="margin-top: 8px;">東京都・神奈川県・大阪府・愛知県・埼玉県・千葉県・北海道・兵庫県・福岡県・広島県・宮城県・京都府・静岡県・岡山県・茨城県</p>
+              <p style="margin-top: 8px;">上記以外のエリアにお住まいの場合は、現時点では対応しておりません。</p>
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       S9：最終CTA
+  =========================== -->
+  <section class="section" aria-label="最終CTA">
+    <div class="container">
+
+      <!-- 感情的背中押しテキスト -->
+      <p class="final-cta-prose">一人で答えを探し続けるのと、現場スタッフの言葉を確認してから考えるのと、どちらが次の転職に近づけるか。</p>
+      <p class="final-cta-prose">登録は転職の決意ではありません。「現場では実際に何が起きているか」という情報を手に入れる第一歩です。情報を持った上で、転職するかどうかを自分で決める——それだけのことです。</p>
+
+      <!-- CTA直上3点チェック -->
+      <ul class="check-list">
+        <li><span class="check-list__mark" aria-hidden="true">✓</span><span>急かしません</span></li>
+        <li><span class="check-list__mark" aria-hidden="true">✓</span><span>いつでも退会できます</span></li>
+        <li><span class="check-list__mark" aria-hidden="true">✓</span><span>転職するかどうかから相談できます</span></li>
+      </ul>
+
+      <!-- 最終CTAボタン -->
+      <a href="https://hoikushi-oshigoto.jp/lp/1/" class="cta-btn" target="_blank" rel="noopener noreferrer">まず現場スタッフの情報を確認してみる</a>
+
+      <!-- CTA直下3点 -->
+      <p class="cta-sub-text">無料 ・ いつでも退会可 ・ 急かしません</p>
+
+      <!-- エリア再掲 -->
+      <div class="area-block">
+        <p class="area-block__label">対応エリア：</p>
+        <p class="area-block__list">東京都 ／ 神奈川県 ／ 大阪府 ／ 愛知県 ／ 埼玉県 ／ 千葉県 ／ 北海道 ／ 兵庫県 ／ 福岡県 ／ 広島県 ／ 宮城県 ／ 京都府 ／ 静岡県 ／ 岡山県 ／ 茨城県</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       フッター
+  =========================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p class="footer__text">本ページはレバウェル保育士のアフィリエイト広告を含みます。</p>
+      <p class="footer__text">掲載している体験談は実際の利用者による声ですが、すべての方に同様の結果を保証するものではありません。</p>
+      <p class="footer__text">記載の数値（年4,000回・17,000件）はレバウェル保育士公式情報に基づきます。最新情報は<a href="https://hoikushi-oshigoto.jp/lp/1/" class="footer__link" target="_blank" rel="noopener noreferrer">公式サイト</a>をご確認ください。</p>
+      <p class="footer__text" style="margin-top: 16px;">&copy; 2026 本サイトはアフィリエイトサイトです</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===========================
+    // FAQアコーディオン：アイコン制御
+    // ===========================
+    (function () {
+      var details = document.querySelectorAll('details.faq-details');
+
+      details.forEach(function (detail) {
+        // Enterキーでの開閉をサポート（summary にフォーカス時）
+        var summary = detail.querySelector('summary');
+        if (summary) {
+          summary.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              detail.open = !detail.open;
+            }
+          });
+        }
+      });
+    })();
+
+    // ===========================
+    // スムーズスクロール（CTAボタンの#アンカー対応）
+    // ===========================
+    // 現状はすべて外部リンクのため不要。将来のページ内リンク用に予約。
+  </script>
+
+</body>
+</html>
